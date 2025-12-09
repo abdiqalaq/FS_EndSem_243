@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" version="29.2.6">
+  <diagram name="Star Schema" id="6rmm3VBWFQHEKNwjDRR9">
+    <mxGraphModel dx="946" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EiJEo5I4tI0TE9MV3MYc-1" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;glass=0;strokeColor=#000000;fillColor=#dae8fc;" value="CustomerDim&#xa;----------------&#xa;CustomerID (PK)&#xa;CustomerName&#xa;Gender&#xa;AgeGroup&#xa;Country" vertex="1">
+          <mxGeometry height="160" width="180" x="250" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EiJEo5I4tI0TE9MV3MYc-2" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;glass=0;strokeColor=#000000;fillColor=#d5e8d4;" value="ProductDim&#xa;----------------&#xa;ProductID (PK)&#xa;ProductName&#xa;Category&#xa;UnitPrice" vertex="1">
+          <mxGeometry height="150" width="180" x="630" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EiJEo5I4tI0TE9MV3MYc-3" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;glass=0;strokeColor=#000000;fillColor=#fff2cc;" value="TimeDim&#xa;-------------&#xa;TimeID (PK)&#xa;Date&#xa;Month&#xa;Quarter&#xa;Year" vertex="1">
+          <mxGeometry height="160" width="180" x="990" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EiJEo5I4tI0TE9MV3MYc-4" parent="1" style="shape=rectangle;whiteSpace=wrap;rounded=1;glass=0;fontStyle=1;strokeColor=#000000;fillColor=#f8cecc;" value="SalesFact&#xa;----------------&#xa;FactID (PK)&#xa;CustomerID (FK)&#xa;ProductID (FK)&#xa;TimeID (FK)&#xa;Quantity&#xa;SalesAmount&#xa;Discount&#xa;TotalSales" vertex="1">
+          <mxGeometry height="220" width="260" x="545" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="EiJEo5I4tI0TE9MV3MYc-5" edge="1" parent="1" source="EiJEo5I4tI0TE9MV3MYc-4" style="endArrow=classic;strokeColor=#000000;" target="EiJEo5I4tI0TE9MV3MYc-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EiJEo5I4tI0TE9MV3MYc-6" edge="1" parent="1" source="EiJEo5I4tI0TE9MV3MYc-4" style="endArrow=classic;strokeColor=#000000;" target="EiJEo5I4tI0TE9MV3MYc-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EiJEo5I4tI0TE9MV3MYc-7" edge="1" parent="1" source="EiJEo5I4tI0TE9MV3MYc-4" style="endArrow=classic;strokeColor=#000000;" target="EiJEo5I4tI0TE9MV3MYc-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
